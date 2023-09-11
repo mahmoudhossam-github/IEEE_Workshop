@@ -25,3 +25,4 @@ typedef u8   Std_Return_Type;
 #define E_OK (Std_Return_Type)1
 #define E_FAIL (Std_Return_Type)0
 #endif /* STD_TYPES_H_*/
+

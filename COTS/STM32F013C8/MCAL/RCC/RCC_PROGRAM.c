@@ -34,7 +34,7 @@ Std_Return_Type Local_FuntionStatus=E_FAIL;
    /***WAITING*/
      while (!GET_BIT(RCC_CR,RCC_HSERDY_BIT));
 RCC_CFGR=0x00000001;
-Std_Return_Type Local_FuntionStatus=E_OK;
+ Local_FuntionStatus=E_OK;
 /*****************************/
 
 #elif RCC_CLKSYSTEM==RCC_HSI
@@ -43,7 +43,7 @@ SET_BIT(RCC_CR,RCC_HSION_BIT);
 /***WAITING*/
 while (!GET_BIT(RCC_CR,RCC_HSIRDY_BIT));
 RCC_CFGR=0x00000000;
-Std_Return_Type Local_FuntionStatus=E_OK;
+ Local_FuntionStatus=E_OK;
 
 /***************************/
 
@@ -52,8 +52,8 @@ Std_Return_Type Local_FuntionStatus=E_OK;
 SET_BIT(RCC_CR,RCC_PLLON_BIT);
 /**WAITING*/
 while (!GET_BIT(RCC_CR,RCC_PLLRDY_BIT));
-RCC_CFGR=0x00000010;
-Std_Return_Type Local_FuntionStatus=E_OK;
+RCC_CFGR=0x00000002;
+Local_FuntionStatus=E_OK;
 /**************************/
 
 #else 
@@ -120,6 +120,7 @@ Std_Return_Type Mcal_Rcc_DisablePeripheral(u8 Copy_PeripheralId,u8 Copy_BusId){
      break;
     }
     return Local_FuntionStatus;
+    
 
  
 }

@@ -33,5 +33,6 @@
  #define GPIO_PORTC_GPIO_BSRR  *((volatile u32*) (GPIO_PORTC_BASE_ADDRESS+0x10))
  #define GPIO_PORTC_GPIO_BRR   *((volatile u32*) (GPIO_PORTC_BASE_ADDRESS+0x14))
  #define GPIO_PORTC_GPIO_LCKR  *((volatile u32*) (GPIO_PORTC_BASE_ADDRESS+0x18))
- 
+ /****************************/
+ #define NULL (void*)0
 #endif /*GPIO_PRITAVE_H*/
